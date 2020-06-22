@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"btl\startup_stm32f407xx.o"
+"btl\main.o"
+"btl\stm32f4xx_it.o"
+"btl\stm32f4xx_hal_msp.o"
+"btl\stm32f4xx_hal_tim.o"
+"btl\stm32f4xx_hal_tim_ex.o"
+"btl\stm32f4xx_hal_rcc.o"
+"btl\stm32f4xx_hal_rcc_ex.o"
+"btl\stm32f4xx_hal_flash.o"
+"btl\stm32f4xx_hal_flash_ex.o"
+"btl\stm32f4xx_hal_flash_ramfunc.o"
+"btl\stm32f4xx_hal_gpio.o"
+"btl\stm32f4xx_hal_dma_ex.o"
+"btl\stm32f4xx_hal_dma.o"
+"btl\stm32f4xx_hal_pwr.o"
+"btl\stm32f4xx_hal_pwr_ex.o"
+"btl\stm32f4xx_hal_cortex.o"
+"btl\stm32f4xx_hal.o"
+"btl\stm32f4xx_hal_exti.o"
+"btl\stm32f4xx_hal_uart.o"
+"btl\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "btl\btl.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "btl.map" -o btl\btl.axf
